@@ -24,18 +24,17 @@ client.on("message", async (msg) => {
   // 2. respond hello message
   const helloMsg = ["hello", "hi"];
   helloMsg.forEach((msgItem, index) => {
-    if (lowMsg.includes(msgItem)) {
+    if (lowMsg.includes(msgItem))
       msg.reply(respondHello());
-    }
   });
 
   // 3. respond time when asked
-  if (lowMsg.includes("time")) {
+  if (lowMsg.includes("time"))
     msg.reply(respondeTime());
-  }
 
   // 4. adding echo feature
   // // respond with the same message
   // // once the message contains else
-  msg.reply(msg.body);
+  else
+    msg.reply(msg.body);
 });
