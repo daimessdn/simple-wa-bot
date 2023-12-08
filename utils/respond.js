@@ -6,6 +6,16 @@ const respondHello = () => {
   ];
 };
 
+// function to respond time
+const respondeTime = () => {
+  const currentTime = new Date();
+  const replyMsg = `The time is ${currentTime.toLocaleTimeString("uk-UK")}`;
+
+  return replyMsg;
+}
+
 module.exports = {
   respondHello,
+  
+  respondeTime
 };

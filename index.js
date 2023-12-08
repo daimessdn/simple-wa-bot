@@ -1,6 +1,11 @@
 const { Client, LocalAuth } = require("whatsapp-web.js");
 
-const { qrCodeLogin, onClientReady, respondHello } = require("./utils");
+const {
+  qrCodeLogin,
+  onClientReady,
+  respondHello,
+  respondeTime,
+} = require("./utils");
 
 // init client
 const client = new Client({
@@ -23,4 +28,14 @@ client.on("message", async (msg) => {
       msg.reply(respondHello());
     }
   });
+
+  // 3. respond time when asked
+  if (lowMsg.includes("time")) {
+    msg.reply(respondeTime());
+  }
+
+  // 4. adding echo feature
+  // // respond with the same message
+  // // once the message contains else
+  msg.reply(msg.body);
 });

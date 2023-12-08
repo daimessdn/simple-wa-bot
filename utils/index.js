@@ -1,12 +1,13 @@
 const { qrCodeLogin, onClientReady } = require("./login");
 
-const { respondHello } = require("./respond");
+const { respondHello, respondeTime } = require("./respond");
 
 module.exports = {
   // login events
   qrCodeLogin,
   onClientReady,
 
-  // respond hello
-  respondHello
+  // respond section
+  respondHello,
+  respondeTime,
 };
