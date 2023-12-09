@@ -38,5 +38,8 @@ client.on("message", async (msg) => {
   // // respond with the same message
   // // once the message contains else
   else
-    msg.reply(msg.body);
+    helloMsg.forEach((msgItem, index) => {
+        if (!lowMsg.includes(msgItem))
+        msg.reply(msg.body);
+    });
 });
