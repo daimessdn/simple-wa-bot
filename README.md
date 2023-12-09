@@ -1,5 +1,7 @@
 # simple-wa-bot
 
+![demo](preview.gif)
+
 ## Description
 Ruuning simple WhatsApp bot thru' Node.js
 

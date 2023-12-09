@@ -12,6 +12,8 @@ const client = new Client({
   authStrategy: new LocalAuth(),
 });
 
+client.initialize();
+
 // pre-auth section
 client.on("qr", qrCodeLogin);
 client.on("ready", onClientReady);
